@@ -1,0 +1,175 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Next.js Assessment API",
+    "description": "API for conducting assessments and storing rankings in Next.js",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/assessment": {
+      "get": {
+        "summary": "Get assessment details",
+        "tags": ["Assessment"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Assessment"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Submit assessment answers",
+        "tags": ["Assessment"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userName": {
+                    "type": "string",
+                    "description": "User's name"
+                  },
+                  "answers": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Array of selected answers for each question"
+                  }
+                },
+                "required": ["userName", "answers"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "integer",
+                      "description": "User's score after assessment"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ranking": {
+      "get": {
+        "summary": "Get assessments ranking",
+        "tags": ["Ranking"],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ranking"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Assessment": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "durationInSeconds": {
+            "type": "integer"
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Question"
+            }
+          }
+        }
+      },
+      "Question": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "alternatives": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Alternative"
+            }
+          },
+          "correctAlternative": {
+            "type": "string"
+          }
+        }
+      },
+      "Alternative": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "Ranking": {
+        "type": "object",
+        "properties": {
+          "ranking": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserScore"
+            },
+            "description": "Array of user scores in the ranking."
+          }
+        }
+      },
+      "UserScore": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "description": "The username of the user."
+          },
+          "score": {
+            "type": "number",
+            "description": "The score of the user."
+          }
+        }
+      }
+    }
+  }
+}

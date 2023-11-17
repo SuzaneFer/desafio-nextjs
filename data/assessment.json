@@ -1,0 +1,131 @@
+{
+  "id": "1",
+  "description": "Prova de JavaScript",
+  "title": "Teste de Conhecimento em JavaScript",
+  "durationInSeconds": 900,
+  "questions": [
+    {
+      "id": "1",
+      "text": "Qual palavra-chave é usada para declarar uma variável constante em JavaScript?",
+      "alternatives": [
+        { "id": "1-a", "text": "var" },
+        { "id": "1-b", "text": "let" },
+        { "id": "1-c", "text": "const" },
+        { "id": "1-d", "text": "final" },
+        { "id": "1-e", "text": "static" }
+      ],
+      "correctAlternative": "1-c"
+    },
+    {
+      "id": "2",
+      "text": "Como se chama a função que converte uma string em um número inteiro em JavaScript?",
+      "alternatives": [
+        { "id": "2-a", "text": "parseInt()" },
+        { "id": "2-b", "text": "stringToInteger()" },
+        { "id": "2-c", "text": "toInteger()" },
+        { "id": "2-d", "text": "parseInteger()" },
+        { "id": "2-e", "text": "strToInt()" }
+      ],
+      "correctAlternative": "2-a"
+    },
+    {
+      "id": "3",
+      "text": "Qual é o operador de igualdade estrita em JavaScript?",
+      "alternatives": [
+        { "id": "3-a", "text": "==" },
+        { "id": "3-b", "text": "==." },
+        { "id": "3-c", "text": "===" },
+        { "id": "3-d", "text": "=>" },
+        { "id": "3-e", "text": "=!=" }
+      ],
+      "correctAlternative": "3-c"
+    },
+    {
+      "id": "4",
+      "text": "Qual é o método usado para adicionar um elemento no final de um array em JavaScript?",
+      "alternatives": [
+        { "id": "4-a", "text": "push()" },
+        { "id": "4-b", "text": "add()" },
+        { "id": "4-c", "text": "append()" },
+        { "id": "4-d", "text": "insert()" },
+        { "id": "4-e", "text": "concat()" }
+      ],
+      "correctAlternative": "4-a"
+    },
+    {
+      "id": "5",
+      "text": "Qual função é usada para imprimir algo no console em JavaScript?",
+      "alternatives": [
+        { "id": "5-a", "text": "console.print()" },
+        { "id": "5-b", "text": "log()" },
+        { "id": "5-c", "text": "print()" },
+        { "id": "5-d", "text": "display()" },
+        { "id": "5-e", "text": "console.log()" }
+      ],
+      "correctAlternative": "5-e"
+    },
+    {
+      "id": "6",
+      "text": "Como se chama o laço de repetição que executa o código enquanto a condição for verdadeira?",
+      "alternatives": [
+        { "id": "6-a", "text": "for" },
+        { "id": "6-b", "text": "while" },
+        { "id": "6-c", "text": "do-while" },
+        { "id": "6-d", "text": "repeat" },
+        { "id": "6-e", "text": "loop" }
+      ],
+      "correctAlternative": "6-b"
+    },
+    {
+      "id": "7",
+      "text": "Qual método é usado para remover o último elemento de um array em JavaScript?",
+      "alternatives": [
+        { "id": "7-a", "text": "pop()" },
+        { "id": "7-b", "text": "removeLast()" },
+        { "id": "7-c", "text": "delete()" },
+        { "id": "7-d", "text": "remove()" },
+        { "id": "7-e", "text": "splice()" }
+      ],
+      "correctAlternative": "7-a"
+    },
+    {
+      "id": "8",
+      "text": "O que o método 'map()' faz em um array JavaScript?",
+      "alternatives": [
+        { "id": "8-a", "text": "Remove elementos específicos do array" },
+        { "id": "8-b", "text": "Altera o tamanho do array" },
+        {
+          "id": "8-c",
+          "text": "Cria um novo array com o resultado da função aplicada a cada elemento"
+        },
+        { "id": "8-d", "text": "Adiciona um elemento no início do array" },
+        { "id": "8-e", "text": "Ordena os elementos do array" }
+      ],
+      "correctAlternative": "8-c"
+    },
+    {
+      "id": "9",
+      "text": "Qual é a função usada para arredondar um número para o inteiro mais próximo em JavaScript?",
+      "alternatives": [
+        { "id": "9-a", "text": "round()" },
+        { "id": "9-b", "text": "ceil()" },
+        { "id": "9-c", "text": "floor()" },
+        { "id": "9-d", "text": "truncate()" },
+        { "id": "9-e", "text": "int()" }
+      ],
+      "correctAlternative": "9-a"
+    },
+    {
+      "id": "10",
+      "text": "Como se verifica o tipo de uma variável em JavaScript?",
+      "alternatives": [
+        { "id": "10-a", "text": "typeof()" },
+        { "id": "10-b", "text": "type()" },
+        { "id": "10-c", "text": "isType()" },
+        { "id": "10-d", "text": "checkType()" },
+        { "id": "10-e", "text": "verifyType()" }
+      ],
+      "correctAlternative": "10-a"
+    }
+  ]
+}
