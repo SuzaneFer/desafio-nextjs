@@ -12,6 +12,8 @@ export async function POST(req: Request) {
   const { answers, userName } = await req.json();
   const assessment = await getAssessment();
 
+  console.log( 'passou aqui')
+
   let score = 0;
   for (let i = 0; i < assessment.questions.length; i++) {
     const answer = answers[i];

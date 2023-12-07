@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/lato": "^5.0.18",
+    "@fontsource/ubuntu": "^5.0.8",
+    "axios": "^1.6.2",
     "clsx": "^2.0.0",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.48.2"
+    "react-hook-form": "^7.48.2",
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",

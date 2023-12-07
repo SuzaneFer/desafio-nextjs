@@ -1,6 +1,8 @@
+"use client";
 import clsx from "clsx";
 import { ChangeEvent } from "react";
 import { QuestionDTO } from "./types";
+import QuestionStyle from "./Question.style";
 
 type QuestionProps = {
   className?: string;
@@ -22,23 +24,24 @@ export function Question({
     }
   }
   return (
-    <div className={clsx(className)}>
-      <div>{question.text}</div>
-      {question.alternatives.map((alternative) => {
-        return (
-          <div key={alternative.id}>
-            <input
-              type="radio"
-              name={name}
-              value={alternative.id}
-              id={alternative.id}
-              checked={value === alternative.id}
-              onChange={handleAlternativeSelection}
-            />
-            <label htmlFor={alternative.id}>{alternative.text}</label>
-          </div>
-        );
-      })}
-    </div>
+    <QuestionStyle>
+      <div className={clsx(className)}>
+        <h2 className="question">{question.text}</h2>
+        {question.alternatives.map((alternative) => {
+          return (
+            <div key={alternative.id} className="option">
+              <input
+                type="radio"
+                name={name}
+                value={alternative.id}
+                id={alternative.id}
+                onChange={handleAlternativeSelection}
+              />
+              <label htmlFor={alternative.id}>{alternative.text}</label>
+            </div>
+          );
+        })}
+      </div>
+    </QuestionStyle>
   );
 }

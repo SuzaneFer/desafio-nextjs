@@ -34,7 +34,12 @@ export async function getRanking(): Promise<UserScore[]> {
   const rankingData = await readFile("data/ranking.json", {
     encoding: "utf-8",
   });
-  return JSON.parse(rankingData);
+
+  const rankingArray: UserScore[] = JSON.parse(rankingData);
+
+  const sortedRanking = rankingArray.sort((a, b) => b.score - a.score);
+
+  return sortedRanking;
 }
 export async function addScore(userScore: UserScore) {
   const ranking = await getRanking();
